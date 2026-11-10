@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+
+  --color-crimson: #C51E2E;
+  --color-crimson-dark: #991321;
+  --color-crimson-light: #FDE8E8;
+  --color-navy: #0A192F;
+  --color-navy-dark: #060F1E;
+  --color-navy-card: #112240;
+  --color-gold: #D97706;
+  --color-gold-hover: #B45309;
+  --color-warm-bg: #FFFDF9;
+  --color-warm-surface: #FAF7F2;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFDF9;
+    color: #1E293B;
+  }
+}
+
+/* Custom smooth transitions & animations */
+@keyframes pulseHeart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-heart-pulse {
+  animation: pulseHeart 2s infinite ease-in-out;
+}
+
